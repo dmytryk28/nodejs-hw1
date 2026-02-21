@@ -7,7 +7,7 @@ import {join} from 'node:path';
 const dbPath = join(process.cwd(), 'db');
 
 export const db = {
-  users: new Storage<User>(join(dbPath, 'users')),
-  books: new Storage<Book>(join(dbPath, 'books')),
-  loans: new Storage<Loan>(join(dbPath, 'loans'))
+  users: new Storage<User>(join(dbPath, 'users.json')),
+  books: new Storage<Book>(join(dbPath, 'books.json')),
+  loans: new Storage<Loan>(join(dbPath, 'loans.json'))
 };
